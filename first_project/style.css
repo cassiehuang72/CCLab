@@ -1,0 +1,35 @@
+body{
+    background-color:black;
+    color:aliceblue;
+    font-family:"Lucida Sans","Lucida Sans Regular","Lucid Grande";
+}
+
+.big{
+    font-size: 100px;
+    font-family:monospace;
+    font-weight:100;
+}
+
+#red{
+    color:coral;
+}
+
+#green{
+    color:aquamarine;
+}
+
+#yellow{
+    color:gold;
+}
+
+/* link decoration */
+a{
+    color:lightpink;
+    font-size: 30px;
+}
+
+/* link interaction */
+a:hover{
+    color:deeppink;
+    font-size: 40px;
+}
