@@ -33,3 +33,44 @@ a:hover{
     color:deeppink;
     font-size: 40px;
 }
+
+#title{
+    text-align:center;
+}
+
+#content{
+    width:80%;
+    position:relative;
+    left:10%;
+    padding:20px;
+}
+
+.left{
+    float:left;
+    width: 50%;
+}
+
+.right{
+    float:left;
+    width: 50%;
+}
+
+img{
+    width: 80%;
+    height: auto;
+}
+
+.two-columns:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+#footer{
+    font-size: small;
+    text-align:center;
+}
+
+#illustrator{
+    
+}
