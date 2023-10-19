@@ -1,0 +1,67 @@
+html, body {
+  background-color:black;
+  color:aliceblue;
+  font-family:"Lucida Sans","Lucida Sans Regular","Lucid Grande";
+}
+
+.big{
+  font-size: 80px;
+  font-family:monospace;
+  font-weight:100;
+  color:rgb(150, 204, 253)
+}
+
+canvas {
+  display: block;
+}
+
+#title{
+  text-align:center;
+}
+
+#content{
+  width:80%;
+  position:relative;
+  left:10%;
+  font-size: 16px;
+  font-family:monospace;
+}
+
+.two-columns:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.left{
+  float:left;
+  width: 50%;
+}
+
+.right{
+  float:left;
+  width: 50%;
+}
+
+#footer{
+  font-size: small;
+  text-align:center;
+  font-family:monospace;
+}
+
+#illustration{
+  font-size: 10px;
+}
+
+#description{
+  padding-top: 40px;
+}
+
+img{
+  width: 35%;
+  height: auto;
+}
+
+h2{
+  color: rgb(67, 164, 255);
+}
