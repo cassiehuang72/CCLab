@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project B</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Nova+Square&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "top-section">
+        <h1>Unravel the Message</h1>
+
+        <div id="sections">
+            <div class="section" onclick="navigateTo('index.html')">Home</div>
+            <div class="section" onclick="navigateTo('canva1.html')">Canva 1</div>
+            <div class="section" onclick="navigateTo('canva2.html')">Canva 2</div>
+            <div class="section" onclick="navigateTo('canva3.html')">Canva 3</div>
+        </div>
+    </div>
+
+    <div class = "flex-container">
+        <div class = "box big"> Canvas 3 </div>
+        <div class = "box box-0">
+            <iframe class="canvas3Frame" src="canvas3" frameborder="0"></iframe>
+        </div>
+        <div class = "box box-1">
+        </div>
+        <div class = "box box-2">
+
+        </div>
+      </div>
+
+    <div id="footer">
+        <p>this is the cclab project B made be Qiya Huang</p>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>

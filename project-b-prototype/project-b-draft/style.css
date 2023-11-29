@@ -1,0 +1,113 @@
+/*.canvas1Frame{
+    width: 500px;
+}
+iframe{
+    display: block;
+}
+*/
+body{
+    margin: 0px;
+    background-color: #fff;
+    color:#000;
+    font-family: 'Alegreya', serif;
+    /*font-family: 'Nova Square', sans-serif;
+    font-family: 'Roboto', sans-serif;*/
+}
+.top-section{
+    margin:3%;
+    margin-left: 15%;
+}
+img{
+    width:70%;
+    height:70%;
+}
+
+#sections {
+    padding:10px;
+}
+
+.section {
+    margin-right: 40px;
+    display: inline-block;
+}
+
+.section:hover {
+    background-color: #555;
+}
+
+.box{
+    padding:0px;
+    margin: 0px;
+    width:450px;
+    height:300px;
+}
+  
+.big{
+    width:100%;
+    padding:8%;
+    height:40px;
+    background-color:ivory;
+    font-size:40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.box-0{
+    width:900px;
+    height:480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:mistyrose;
+}
+
+.box-1{
+    background-color:cornsilk;
+}
+  
+.box-2{
+    background-color:papayawhip;
+}
+  
+.box-3{
+    background-color:mistyrose;
+}
+  
+.flex-container{
+    display:flex;
+    justify-content: space-evenly; /*flex-end, space-between, space-evenly*/
+    width: 900px; /*80%*/
+    margin:auto;
+    flex-wrap:wrap;
+}
+
+.canvas1Frame{
+    width: 450px;
+    height: 450px;
+    text-align: center;
+    display: block;
+}
+
+.canvas2Frame{
+    width: 640px;
+    height: 480px;
+    text-align: center;
+    display: block;
+}
+
+.canvas3Frame{
+    width: 640px;
+    height: 480px;
+    text-align: center;
+    display: block;
+}
+
+iframe{
+    text-align: center;
+    display: block;
+}
+
+#footer{
+    font-size: small;
+    text-align:center;
+}
