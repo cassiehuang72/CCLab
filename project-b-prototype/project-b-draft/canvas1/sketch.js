@@ -8,7 +8,7 @@ let theWind;
 let theBlower;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(600, 480);
   theWind = new Wind();
   theBlower = new Blower();
   strokeWeight(2);
