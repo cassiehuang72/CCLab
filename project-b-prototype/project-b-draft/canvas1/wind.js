@@ -1,7 +1,7 @@
 class Wind{
   constructor() {
-    this.x = width/8;
-    this.y = height/8;
+    this.x = width/7;
+    this.y = height/3;
     this.direction = "right";
   }
   update() {
@@ -22,28 +22,28 @@ class Wind{
 	}
   }
   display() {
-    textSize(18);
+    textSize(20);
     noStroke();
     if (mostRecentWord){
       fill('yellow');
-      text(mostRecentWord, 6, 20);
+      text(mostRecentWord, this.x, this.y-50);
       fill('cornflowerblue');
-      text(mostRecentWord, 6, 45);
+      text(mostRecentWord, this.x, this.y-25);
       fill('tomato');
-      text(mostRecentWord, 6, 70);
+      text(mostRecentWord, this.x, this.y);
       fill('limegreen');
-      text(mostRecentWord, 6, 95);
+      text(mostRecentWord, this.x, this.y+25);
     }
     else{
       let instruction = "Command Options: Up, Down, Left, Right, Blow, Pink, Blue, Purple ...."
       fill('yellow');
-      text(instruction, 6, 20);
+      text(instruction, this.x, this.y-50);
       fill('cornflowerblue');
-      text(instruction, 6, 45);
+      text(instruction, this.x, this.y-25);
       fill('tomato');
-      text(instruction, 6, 70);
+      text(instruction, this.x, this.y);
       fill('limegreen');
-      text(instruction, 6, 95);
+      text(instruction, this.x, this.y+25);
     }
     
     fill(360);
@@ -52,35 +52,35 @@ class Wind{
       push();
       translate(this.x, this.y);
       rotate(-PI/2)
-      rectMode(CENTER)
-      rect(0,0,80,10);
-      triangle(30,-10,30,10,50,0)
+      rectMode(CORNER)
+      rect(0,-10,80,10);
+      triangle(80,-15,80,5,100,-5);
       pop();
     }
     else if (this.direction == "down"){
       push();
       translate(this.x, this.y);
       rotate(PI/2)
-      rectMode(CENTER)
+      rectMode(CORNER)
       rect(0,0,80,10);
-      triangle(30,-10,30,10,50,0)
+      triangle(80,-5,80,15,100,5)
       pop();
     }
     else if (this.direction == "left"){
       push();
       translate(this.x, this.y);
       rotate(PI)
-      rectMode(CENTER)
+      rectMode(CORNER)
       rect(0,0,80,10);
-      triangle(30,-10,30,10,50,0)
+      triangle(80,-5,80,15,100,5)
       pop();
     }
     else{
       push();
       translate(this.x, this.y);
-      rectMode(CENTER)
+      rectMode(CORNER)
       rect(0,0,80,10);
-      triangle(30,-10,30,10,50,0)
+      triangle(80,-5,80,15,100,5)
       pop();
     }
   }

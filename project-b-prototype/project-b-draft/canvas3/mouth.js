@@ -59,7 +59,7 @@ class Mouth {
       translate(width, 0);
       scale(-1, 1);
       fill("yellow");
-      rect(20, 40, (this.mouthHeight * this.mouthWidth) / 20, 20);
+      rect(windowWidth/7, windowHeight/3.2, (this.mouthHeight * this.mouthWidth) / 40, 20);
       pop();
     }
   }

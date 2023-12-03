@@ -12,14 +12,14 @@ let positions;
 let theMouth;
 
 let message = "Open Your Mouth to See What Will Happen";
-let duration = 60;
+let duration = 100;
 let counter = 0;
 
 function setup() {
-  let canvas = createCanvas(w, h);
+  let canvas = createCanvas(w,h);
   //canvas.parent("canvasContainer");
   cam = createCapture(VIDEO);
-  cam.size(w, h);
+  cam.size(w,h);
   cam.hide();
 
   //colorMode(HSB);
@@ -31,7 +31,7 @@ function setup() {
 
 function draw() {
   if (counter < duration) {
-    fill(0, 0, 0); // Set text color to red
+    fill(255); 
     textSize(20);
     textAlign(CENTER, CENTER);
     text(message, width / 2, height / 2);
@@ -43,7 +43,7 @@ function draw() {
     translate(w, 0);
     scale(-1, 1);
     noStroke();
-    image(cam, 0, 0, w, h);
+    image(cam, 0, 0, w,h);
     pixelsDisplay();
     positions = tracker.getCurrentPosition();
 
@@ -95,8 +95,9 @@ function pixelsDisplay() {
 function pixelsChaos(mouthWidth, mouthHeight) {
   //gridSize = 20;
   let mouthSize = mouthWidth * mouthHeight;
+  console.log(mouthSize)
   //gridSize = int(map(mouthSize, 500, 1000, gridSize, 19));
-  gridSize = int(map(mouthSize, 500, 1000, 20, 10));
+  gridSize = int(map(mouthSize, 500, 4000, 20, 10));
   gridSize = int(constrain(gridSize, 10, 20));
   //console.log(mouthSize, gridSize); //200-4000
   

@@ -17,15 +17,19 @@ let mostRecentWord;
 let img;
 let ears = [];
 
+let message = "Talk and See What Will Happen";
+let duration = 100;
+let counter = 0;
+
 function preload() {
   img = loadImage("ear1.png");
 }
 
 function setup() {
-  let canvas = createCanvas(w, h);
+  let cimg = createCanvas(windowWidth, windowHeight);
   //canvas.parent("canvasContainer");
   cam = createCapture(VIDEO);
-  cam.size(w, h);
+  cam.size(windowWidth, windowHeight);
   cam.hide();
 
   //colorMode(HSB);
@@ -42,10 +46,17 @@ function setup() {
 }
 
 function draw() {
+  if (counter < duration) {
+    fill(255); 
+    textSize(20);
+    //textAlign(CENTER, CENTER);
+    text(message, width / 2-100, height / 2);
+    counter++;
+  } else {
   clear();
 
-  background(0);
-  translate(w, 0);
+  background(50);
+  translate(windowWidth, 0);
   scale(-1, 1);
   noStroke();
   positions = tracker.getCurrentPosition();
@@ -55,9 +66,9 @@ function draw() {
   scale(-1, 1);
   //image(img, 0, 0, img.width*0.5,img.height*0.5);
   fill("white");
-  textAlign(CENTER, CENTER);
-  textSize(18);
-  text("Speaking Extent", 85, 20);
+  textAlign(CORNER,CORNER);
+  textSize(20);
+  text("Speaking Extent", windowWidth/7, windowHeight/3.5);
   pop();
 
   //image(img, mouseX, mouseY, img.width * 0.3, img.height * 0.3)
@@ -67,13 +78,14 @@ function draw() {
   for (let i = 0; i < ears.length; i++) {
     //ears[i].disappear();
     ears[i].display();
+    ears[i].displayText();
     if (ears[i].checkDuration()) {
       ears.splice(i, 1);
     }
   }
-  while (ears.length > 10) {
-    ears.splice(0, 1);
-  }
+  // while (ears.length > 10) {
+  //   ears.splice(0, 1);
+  // }
 
   theMouth = new Mouth(positions);
   if (theMouth.positions) {
@@ -86,24 +98,6 @@ function draw() {
     }
     theMouth.display();
   }
-
-  textSize(22);
-  noStroke();
-  if (mostRecentWord) {
-    fill("cornflowerblue");
-    text(mostRecentWord, 50, 45);
-    fill("limegreen");
-    text(mostRecentWord, 50, 95);
-    
-    push();
-    textAlign(CENTER, CENTER);
-    translate(width, 0);
-    scale(-1, 1);
-    fill("#9C27B0");
-    text(mostRecentWord, width-50, 20);
-    fill("#CDDC39");
-    text(mostRecentWord, width-50, 70);
-    pop();
   }
 }
 
