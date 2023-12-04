@@ -7,6 +7,10 @@ let bubbles = [];
 let theWind;
 let theBlower;
 
+let message = "Control with Speech";
+let duration = 100;
+let counter = 0;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   theWind = new Wind();
@@ -26,6 +30,13 @@ function setup() {
 }
 
 function draw() {
+  if (counter < duration) {
+    fill(255); 
+    textSize(20);
+    textAlign(CENTER, CENTER);
+    text(message, width / 2, height / 2);
+    counter++;
+  } else {
   background(50);
   noStroke();
   if (mouseIsPressed || mostRecentWord == "blow") {
@@ -58,6 +69,7 @@ function draw() {
   
   theBlower.updateColor();
   theBlower.display(theWind);
+}
 }
 
 // called every time a word/phrase is detected
